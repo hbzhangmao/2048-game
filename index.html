@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048 游戏</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="game-container">
+        <header class="game-header">
+            <h1>2048</h1>
+            <div class="scores-container">
+                <div class="score-box">
+                    <div class="score-label">分数</div>
+                    <div class="score-value" id="score">0</div>
+                </div>
+                <div class="score-box">
+                    <div class="score-label">最高分</div>
+                    <div class="score-value" id="best-score">0</div>
+                </div>
+            </div>
+        </header>
+
+        <div class="game-grid-container">
+            <div class="game-grid" id="game-grid"></div>
+            <div class="game-message" id="game-message">
+                <p></p>
+                <button id="try-again">再试一次</button>
+            </div>
+        </div>
+
+        <div class="game-controls">
+            <button id="new-game" class="control-btn">新游戏</button>
+            <button id="undo" class="control-btn">撤销</button>
+            <button id="sound-toggle" class="control-btn">音效: 开</button>
+        </div>
+
+        <div class="game-instructions">
+            <p><strong>操作方式:</strong> 方向键 ←↑→↓ 或 WASD</p>
+            <p><strong>移动端:</strong> 手指滑动控制</p>
+        </div>
+    </div>
+
+    <script src="js/game.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/input.js"></script>
+    <script src="js/sound.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
