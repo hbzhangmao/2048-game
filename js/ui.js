@@ -42,8 +42,8 @@ class UIManager {
         const grid = this.game.getGrid();
         const tileSize = 100 / this.game.size;
 
-        for (let i = 0; i < this.size; i++) {
-            for (let j = 0; j < this.size; j++) {
+        for (let i = 0; i < this.game.size; i++) {
+            for (let j = 0; j < this.game.size; j++) {
                 const value = grid[i][j];
                 if (value !== 0) {
                     const tile = document.createElement('div');
@@ -148,7 +148,7 @@ class UIManager {
         this.updateScores();
         
         if (this.game.isWin()) {
-            this.showMessage('恭喜！你达到了 2048！', true);
+            this.showMessage('恭喜！你达到了2048！', true);
         } else if (this.game.isGameOver()) {
             this.showMessage('游戏结束！', true);
         }
